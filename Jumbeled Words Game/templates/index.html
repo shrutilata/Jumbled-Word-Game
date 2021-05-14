@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumbled Word Game</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .center{
+            width: 30%;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="center">
+<div class="container">
+
+<h1 class="text-center">Jumbeled Word</h1>
+
+<h3>{{ jum_word }}</h3>
+<br>
+
+<form action="{% url 'check' %}" method="get">
+    <div class="form-group">
+    <input class="form-control" type="text" name="answer" placeholder="answer">
+    <br>
+    <button class="center btn btn-primary" type="submit">Check</button>
+</div>
+</form>
+<br>
+
+<h4>{{ msg }}</h4>
+</div>
+</div>
+</body>
+</html>
